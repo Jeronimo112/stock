@@ -45,7 +45,12 @@ public class Index_Controller extends HttpServlet {
 			rd.forward(request, response);
                         Stock stock = YahooFinance.get("");
                         stock.print();
-                        
+                        stock.print();
+                        stock.print();
+                        stock.print();
+                        stock.print();
+                        stock.print();
+                        stock.print();
                         stock.print();
                         stock.print();
         }
