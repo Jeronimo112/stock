@@ -46,6 +46,7 @@ public class Index_Controller extends HttpServlet {
                         Stock stock = YahooFinance.get("ADS.DE");
  
                         stock.print();
+                        stock.print();
         }
         if(action.equals("index")){
       
