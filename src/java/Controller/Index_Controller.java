@@ -47,6 +47,8 @@ public class Index_Controller extends HttpServlet {
                         stock.print();
                         stock.print();
                         stock.print();
+                        stock.print();
+                        stock.print();
         }
         if(action.equals("index")){
       
