@@ -6,13 +6,16 @@
 package Controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.math.BigDecimal;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import yahoofinance.Stock;
+import yahoofinance.YahooFinance;
+
 
 /**
  *
@@ -33,12 +36,16 @@ public class Index_Controller extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        
+        
         String action = request.getParameter("param1");
         if(action.equals("charts")){
       
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/charts.jsp");
 			rd.forward(request, response);
-		
+                        Stock stock = YahooFinance.get("ADS.DE");
+ 
+                        stock.print();
         }
         if(action.equals("index")){
       
