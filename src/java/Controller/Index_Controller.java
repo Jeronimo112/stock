@@ -43,7 +43,8 @@ public class Index_Controller extends HttpServlet {
       
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/charts.jsp");
 			rd.forward(request, response);
-                        Stock stock = YahooFinance.get("ADS.DE");
+                        Stock stock = YahooFinance.get("");
+                        stock.print();
                         stock.print();
                         stock.print();
         }
